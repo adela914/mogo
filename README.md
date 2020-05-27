@@ -1,9 +1,3 @@
-# Personal project for JS crash course from WTM
-
-This is a personal project for Women Techmakers Berlin's JavaScript Crash Course 2019 at Wayfair.
-First of all, I would like to thank to all the support from organizers, tutors and students.
-Without their support and helps I couldn't learn and grow this much. Thank you.
-
 # MOGO🍱
 
 Mogo means "Eat!" in Korean. This application is for people who have a craving for good authentic Korean Restaurants in Berlin. In this application people can share their favorite restaurants and their opinions about the restaurants.
