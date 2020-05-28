@@ -2,7 +2,21 @@
 
 Mogo means "Eat!" in Korean. This application is for people who have a craving for good authentic Korean Restaurants in Berlin. In this application people can share their favorite restaurants and their opinions about the restaurants.
 
-For this project I mainly aimed to make the four basic functions of CRUD.
+- User can see a list of shared restaurants, search by its name and results will dynamically appear.
+
+  ![](/frontend/src/assets/Mogo_Search.gif)
+
+- User can share their favorite restaurants with image and description.
+
+  ![](/frontend/src/assets/Mogo_share.gif)
+
+- User can delete or modify restaurants by confirming with the password they set.
+
+  ![](/frontend/src/assets/Mogo_delete.gif)
+
+- User can leave comments in restaurant's page and sign up for the newsletter.
+
+  ![](/frontend/src/assets/Mogo_comment.gif)
 
 ## How to run
 
@@ -29,8 +43,6 @@ http://localhost:3000
 ```
 
 $ cd frontend
-$ npm install -D pug pug-plain-loader
-$ vue add vuetify
 $ npm i
 $ npm run serve
 
@@ -81,7 +93,8 @@ Major frameworks used for frontend :
 
 <ul>
 <li> Vue.js </li>
-<li> Pug </li>
+<li> Vuex </li>
+<li> Pug </lsi>
 <li> Vuetify </li>
 </ul>
 
@@ -93,3 +106,10 @@ For that <a href="https://mailchimp.com/developer/">Mailchimp</a> API is used.
 ## Test
 
 For testing application Avajs/Ava has been used.
+
+### **Commands to run tests **
+
+- `cd backend`
+- `npm run test` to run AVA, which is a test runner for Node.js.
+- `npm run test-coverage` to get the test coverage with NYC in the CLI.
+- `nyc report --reporter=html` to get the test coverage report.

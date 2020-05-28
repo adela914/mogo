@@ -1,30 +1,13 @@
-const express = require("express")
+const express = require('express')
 const router = express.Router()
 
+const RestaurantService = require('../services/restaurant-service')
 
 //root route
 
-router.get("/", function(req, res) {
-    res.render("index")
+router.get('/', async function (req, res) {
+  const restaurants = await RestaurantService.findAll()
+  res.send(restaurants)
 })
-
-// show register form
-
-router.get("/register", function(req, res) {
-    res.render("register")
-})
-
-//handle sign up logic to be added 
-
-
-//show login form
-
-router.get("/login", function(req, res) {
-    res.render("login")
-})
-
-//handling login logic to be added 
-
-// logout route to be added 
 
 module.exports = router
