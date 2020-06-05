@@ -1,29 +1,30 @@
-var mongoose = require("mongoose");
+var mongoose = require('mongoose')
 var restaurantSchema = new mongoose.Schema(
-
-    {
-        name: String,
-        author: String,
-        location: String,
-        image: String,
-        description: String,
-        password: String,
-        likes: {
-            type: Number,
-            default: 0
+  {
+    name: String,
+    author: String,
+    location: String,
+    image: String,
+    description: String,
+    password: String,
+    likes: {
+      type: Number,
+      default: 0,
+    },
+    comments: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'comment',
+        autopopulate: {
+          maxDepth: 1,
         },
-        comments: [{
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "comment",
-            autopopulate: {
-                maxDepth: 1
-            }
-        }]
-
-    }, {
-        timestamps: true
-    }
-);
+      },
+    ],
+  },
+  {
+    timestamps: true,
+  }
+)
 
 restaurantSchema.plugin(require('mongoose-autopopulate'))
 
