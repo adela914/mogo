@@ -47,7 +47,6 @@ router.post('/subscribe', (req, res) => {
     } else {
       if (response.statusCode === 200) {
         console.log(response.statusCode)
-        console.log('gut')
       } else {
         console.log(response.statusCode)
       }

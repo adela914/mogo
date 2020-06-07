@@ -15,7 +15,7 @@ const defaultImg = require('../images/sashimi.png')
 
 export default {
   data: () => ({
-      
+    
       defaultImg:defaultImg
 
     })

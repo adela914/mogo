@@ -22,15 +22,18 @@ import { mapActions } from 'vuex'
   export default { 
    
     name: 'ResInfo',
+
     data: () => ({
-      defaultImg:defaultImg,
+      defaultImg: defaultImg,
 
     }),
+
     props: {
       restaurant: {
         type: Object
       }
     },
+
     methods: {
       ...mapActions(['likeRes', 'fetchARes', 'fetchRes']),
        likeRestaurant() {   

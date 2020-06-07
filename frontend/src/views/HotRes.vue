@@ -4,10 +4,6 @@
     v-container.container
         v-row
           HotCard(v-for="hotRestaurant in hotRestaurants", :hotRestaurant="hotRestaurant", :key="hotRestaurant._id")
-
-   
-    
-      
     
 </template>
 
@@ -17,7 +13,6 @@
 .container {
   display: flex;
   flex-direction: row;
-  
 }
 
 </style>

@@ -17,8 +17,6 @@
         v-col(class="text-center"
         cols="12") Made with ❤️ in Berlin          
 
-      
-
 </template>
 
 <script>

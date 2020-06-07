@@ -7,7 +7,7 @@
         div @{{ restaurant.location }}
         div Posted by {{ restaurant.author }}
       v-card-actions
-        v-btn(text @click="moveRestaurant") Explore
+        v-btn(text @click="exploreRestaurant") Explore
         v-btn(@click="likeRestaurant" color="purple" text)
           v-icon(color="purple") mdi-heart
         v-card-subtitle.red--text.text--lighten-1.font-weight-bold {{ restaurant.likes }} LIKES
@@ -26,24 +26,25 @@ const defaultImg = require('../../images/food.png')
 import { mapActions } from 'vuex'
 
   export default { 
-
-    data: () => ({
-      show: false,
-      defaultImg:defaultImg
-
-    }),
     name: 'ResCard',
     props: {
       restaurant: {
         type: Object
       }
     },
+
+    data: () => ({
+      show: false,
+      defaultImg:defaultImg
+
+    }),
+    
     methods: {
      ...mapActions(['likeRes']),
-     likeRestaurant() {
-       this.likeRes(this.restaurant._id)
+     async likeRestaurant() {
+       await this.likeRes(this.restaurant._id)
      }, 
-     moveRestaurant(){
+     exploreRestaurant(){
        this.$router.push({ name:'restaurant', params: {id: this.restaurant._id} })
      }
     }
