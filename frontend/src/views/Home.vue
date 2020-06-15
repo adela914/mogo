@@ -38,7 +38,6 @@ export default {
     searchUserList(){ 
       var vm = this
       return this.restaurants.filter(function (val) { 
-        console.log(vm.restaurants) 
         if(val.name) return val.name.indexOf(vm.searchName) !== -1
         else return true
       })  
