@@ -32,7 +32,6 @@ router.put('/update/:id', async (req, res) => {
   const editRes = await RestaurantService.update(req.params.id, req.body)
   const restaurant = await RestaurantService.find(req.params.id)
 
-  console.log(restaurant)
   res.status(200).send(restaurant)
 })
 

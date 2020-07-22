@@ -23,14 +23,14 @@
         "express": "^4.17.1",
         "lodash": "^4.17.15",
         "mongoose": "^5.7.11",
-        "mongoose-autopopulate": "^0.9.1",
+        "mongoose-autopopulate": "^0.12.2",
         "negotiator": "^0.6.2",
-        "pug": "^2.0.4",
+        "pug": "^3.0.0",
         "request": "^2.88.0"
     },
     "devDependencies": {
-        "ava": "^2.4.0",
-        "nyc": "^14.1.1",
+        "ava": "^3.10.1",
+        "nyc": "^15.1.0",
         "supertest": "^4.0.2"
     }
 }

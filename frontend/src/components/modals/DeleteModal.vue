@@ -38,7 +38,6 @@ export default {
           this.$router.push('/')
         } else {
           this.alert = true
-          console.log("Password doesn't match.")
         }
       },
       cancelModal() {
