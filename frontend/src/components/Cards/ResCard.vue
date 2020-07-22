@@ -36,7 +36,6 @@ import { mapActions } from 'vuex'
     data: () => ({
       show: false,
       defaultImg:defaultImg
-
     }),
     
     methods: {
@@ -57,6 +56,5 @@ import { mapActions } from 'vuex'
 .card {
   margin-bottom: 10px;
 }
-
 
 </style>

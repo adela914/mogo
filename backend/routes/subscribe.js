@@ -12,9 +12,8 @@ const mailchimpAPIKey = process.env.MAILCHIMP_APIKEY
 // process.env.MAILCHIMP_APIKEY
 
 router.post('/subscribe', (req, res) => {
-  var firstName = req.body.fName
-  var lastName = req.body.lName
-  var email = req.body.email
+
+  const { fName, lName, email } = req.body
 
   // Construct req data
   const data = {
@@ -23,8 +22,8 @@ router.post('/subscribe', (req, res) => {
         email_address: email,
         status: 'subscribed',
         merge_fields: {
-          FNAME: firstName,
-          LNAME: lastName,
+          FNAME: fName,
+          LNAME: lName,
         },
       },
     ],
