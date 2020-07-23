@@ -35,17 +35,15 @@ export default {
   },
   computed: {
     ...mapState(['restaurants']), 
-    searchUserList(){ 
-      var vm = this
-      return this.restaurants.filter(function (val) { 
-        if(val.name) return val.name.indexOf(vm.searchName) !== -1
+    searchUserList(){
+
+      return this.restaurants.filter((val) => { 
+
+        if(val.name) return val.name.indexOf(this.searchName) !== -1
         else return true
-      })  
-    } 
-  },
-  methods: {
-  },
-  created() {
+
+      })
+    }
   }
 }
 </script>

@@ -24,7 +24,7 @@ import { mapActions } from 'vuex'
     name: 'ResInfo',
 
     data: () => ({
-      defaultImg: defaultImg,
+      defaultImg
 
     }),
 
@@ -35,7 +35,7 @@ import { mapActions } from 'vuex'
     },
 
     methods: {
-      ...mapActions(['likeRes', 'fetchARes', 'fetchRes']),
+      ...mapActions(['likeRes']),
        likeRestaurant() {   
         this.likeRes(this.restaurant._id)  
      },

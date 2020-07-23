@@ -35,7 +35,7 @@ import { mapActions } from 'vuex'
 
     data: () => ({
       show: false,
-      defaultImg:defaultImg
+      defaultImg
     }),
     
     methods: {

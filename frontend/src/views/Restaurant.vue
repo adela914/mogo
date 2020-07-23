@@ -50,9 +50,11 @@ export default {
 
 <style scoped>
 .modals {
+
   padding-left:12px;
 }
 .modal {
+  
   display: inline-block;
   padding-right: 30px;
   margin-top: 10px;

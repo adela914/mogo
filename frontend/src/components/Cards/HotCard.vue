@@ -22,11 +22,12 @@
 
 <script>
 const defaultImg = require('../../images/food.png')
+
   export default { 
 
     data: () => ({
       show: false,
-      defaultImg:defaultImg
+      defaultImg
     }),
     name: 'HotCard',
     props: {
