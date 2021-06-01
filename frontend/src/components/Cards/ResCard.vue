@@ -25,36 +25,36 @@
 const defaultImg = require('../../images/food.png')
 import { mapActions } from 'vuex'
 
-  export default { 
-    name: 'ResCard',
-    props: {
-      restaurant: {
-        type: Object
-      }
-    },
+export default {
+  name: 'ResCard',
+  props: {
+    restaurant: {
+      type: Object
+    }
+  },
 
-    data: () => ({
-      show: false,
-      defaultImg
-    }),
-    
-    methods: {
-     ...mapActions(['likeRes']),
-     async likeRestaurant() {
-       await this.likeRes(this.restaurant._id)
-     }, 
-     exploreRestaurant(){
-       this.$router.push({ name:'restaurant', params: {id: this.restaurant._id} })
-     }
+  data: () => ({
+    show: false,
+    defaultImg
+  }),
+
+  methods: {
+    ...mapActions(['likeRes']),
+    async likeRestaurant() {
+      await this.likeRes(this.restaurant._id)
+    },
+    exploreRestaurant() {
+      this.$router.push({
+        name: 'restaurant',
+        params: { id: this.restaurant._id }
+      })
     }
   }
-
+}
 </script>
 
 <style scoped>
-
 .card {
   margin-bottom: 10px;
 }
-
 </style>

@@ -16,45 +16,42 @@
 
 </template>
 
-
-
 <script>
 import { mapActions } from 'vuex'
 import formValidation from '../../mixins/validation_mixin'
 
-  export default { 
-    name: 'Form',
-    props: ['Home'],
-    mixins: [formValidation],
+export default {
+  name: 'Form',
+  props: ['Home'],
+  mixins: [formValidation],
 
-    data() {
-      return {
-        author: '',
-        name: '',
-        location: '',
-        image: '',
-        description: '',
-        password: '',
+  data() {
+    return {
+      author: '',
+      name: '',
+      location: '',
+      image: '',
+      description: '',
+      password: ''
+    }
+  },
+  methods: {
+    ...mapActions(['addRes']),
+    async submit() {
+      const nesRes = {
+        author: this.author,
+        name: this.name,
+        location: this.location,
+        image: this.image,
+        description: this.description,
+        password: this.password
       }
-    },
-    methods: {
-      ...mapActions(['addRes']),
-      async submit() {
-
-        const nesRes= {
-          author: this.author,
-          name: this.name,
-          location: this.location,
-          image: this.image,
-          description: this.description,
-          password: this.password
-        }
-        if (this.$refs.form.validate()) {
+      if (this.$refs.form.validate()) {
         await this.addRes(nesRes)
         await this.$refs.form.reset()
         this.$router.push('/')
       }
-      }
     }
   }
+}
 </script>

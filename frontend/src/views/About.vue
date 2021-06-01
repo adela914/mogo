@@ -8,15 +8,13 @@
 
 </template>
 
-
-
 <script>
 const mainImg = require('../images/sashimi.png')
 
 export default {
   data: () => ({
-      mainImg
-    })
+    mainImg
+  })
 }
 </script>
 

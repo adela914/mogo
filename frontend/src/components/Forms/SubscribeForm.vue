@@ -20,7 +20,7 @@ import formValidation from '../../mixins/validation_mixin'
 export default {
   name: 'SubscribeForm',
   mixins: [formValidation],
-  
+
   data() {
     return {
       alert: false,
@@ -32,7 +32,7 @@ export default {
 
   methods: {
     ...mapActions(['subscribe']),
-      Signup() {
+    Signup() {
       const userInfo = {
         fName: this.fName,
         lName: this.lName,
@@ -41,7 +41,7 @@ export default {
       if (this.$refs.form.validate()) {
         this.subscribe(userInfo)
         this.alert = true
-        setTimeout(() => this.alert = false, 5000)
+        setTimeout(() => (this.alert = false), 5000)
         this.$refs.form.reset()
       }
     }

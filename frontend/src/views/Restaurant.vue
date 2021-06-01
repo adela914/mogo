@@ -12,7 +12,6 @@
         FormComment(:restaurant="restaurant" fluid)
 </template>
 
-
 <script>
 import ResInfo from '@/components/Cards/ResInfoCard.vue'
 import Comments from '@/components/Comments.vue'
@@ -29,18 +28,18 @@ export default {
     Comments,
     FormComment,
     DeleteModal,
-    EditModal,
+    EditModal
   },
-  data(){
-    return { 
-    dialog: false
+  data() {
+    return {
+      dialog: false
     }
   },
   computed: {
     ...mapState(['restaurant'])
   },
   methods: {
-    ...mapActions(['fetchARes']),
+    ...mapActions(['fetchARes'])
   },
   created() {
     this.fetchARes(this.$route.params.id)
@@ -50,15 +49,11 @@ export default {
 
 <style scoped>
 .modals {
-
-  padding-left:12px;
+  padding-left: 12px;
 }
 .modal {
-  
   display: inline-block;
   padding-right: 30px;
   margin-top: 10px;
-  
 }
-
 </style>

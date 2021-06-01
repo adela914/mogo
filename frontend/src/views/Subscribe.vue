@@ -2,7 +2,6 @@
   SubscribeForm
 </template>
 
-
 <script>
 import SubscribeForm from '@/components/Forms/SubscribeForm.vue'
 

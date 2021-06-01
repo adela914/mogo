@@ -19,30 +19,24 @@ const defaultImg = require('../../images/food.png')
 
 import { mapActions } from 'vuex'
 
-  export default { 
-   
-    name: 'ResInfo',
+export default {
+  name: 'ResInfo',
 
-    data: () => ({
-      defaultImg
+  data: () => ({
+    defaultImg
+  }),
 
-    }),
+  props: {
+    restaurant: {
+      type: Object
+    }
+  },
 
-    props: {
-      restaurant: {
-        type: Object
-      }
-    },
-
-    methods: {
-      ...mapActions(['likeRes']),
-       likeRestaurant() {   
-        this.likeRes(this.restaurant._id)  
-     },
+  methods: {
+    ...mapActions(['likeRes']),
+    likeRestaurant() {
+      this.likeRes(this.restaurant._id)
     }
   }
+}
 </script>
-
-
-
-

@@ -7,20 +7,17 @@
     
 </template>
 
-
 <style scoped>
-
 .container {
   display: flex;
   flex-direction: row;
 }
-
 </style>
 
 <script>
 import HotCard from '@/components/Cards/HotCard.vue'
 import { mapState, mapActions } from 'vuex'
- 
+
 export default {
   name: 'HotRes',
   components: {

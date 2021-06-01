@@ -9,17 +9,13 @@
         div.overline At {{ comment.createdAt}}
 </template>
 
-
 <script>
 export default {
-  
-    name: 'Comments',
-    props: {
-      comments: {
-        type: Array
+  name: 'Comments',
+  props: {
+    comments: {
+      type: Array
     }
-  } 
+  }
 }
 </script>
-
-

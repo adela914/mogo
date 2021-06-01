@@ -2,7 +2,6 @@
   Form
 </template>
 
-
 <script>
 import Form from '@/components/Forms/AddForm.vue'
 

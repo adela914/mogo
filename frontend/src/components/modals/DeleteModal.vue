@@ -25,28 +25,26 @@ export default {
     }
   },
   props: {
-      restaurant: {
-        type: Object
+    restaurant: {
+      type: Object
+    }
+  },
+  methods: {
+    ...mapActions(['delRes']),
+    deleteRes() {
+      if (this.password === this.restaurant.password) {
+        this.delRes(this.restaurant._id)
+        this.dialog = false
+        this.$router.push('/')
+      } else {
+        this.alert = true
       }
     },
-   methods: {
-      ...mapActions(['delRes']),
-      deleteRes() {
-        if(this.password === this.restaurant.password) {
-          this.delRes(this.restaurant._id)
-          this.dialog = false
-          this.$router.push('/')
-        } else {
-          this.alert = true
-        }
-      },
-      cancelModal() {
-        this.dialog = false
-        this.alert = false
-        this.password = ''
+    cancelModal() {
+      this.dialog = false
+      this.alert = false
+      this.password = ''
     }
   }
 }
-
-  
 </script>

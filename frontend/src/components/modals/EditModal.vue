@@ -30,29 +30,27 @@ import { mapActions } from 'vuex'
 export default {
   data() {
     return {
-      dialog: false,
+      dialog: false
     }
   },
   props: {
-      restaurant: {
-        type: Object
-      }
-    },
-   methods: {
-      ...mapActions(['editRes']),
-      editRestaurant() {
-        const editedRes = {
+    restaurant: {
+      type: Object
+    }
+  },
+  methods: {
+    ...mapActions(['editRes']),
+    editRestaurant() {
+      const editedRes = {
         name: this.restaurant.name,
         author: this.restaurant.author,
         location: this.restaurant.location,
         image: this.restaurant.image,
         description: this.restaurant.description
-        }
-        this.editRes([this.restaurant._id, editedRes])
-        this.dialog = false     
-    },
+      }
+      this.editRes([this.restaurant._id, editedRes])
+      this.dialog = false
+    }
   }
 }
-
-  
 </script>

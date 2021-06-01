@@ -16,29 +16,29 @@
 import { mapActions } from 'vuex'
 import formValidation from '../../mixins/validation_mixin'
 
-  export default {
-    name: 'FormComment',
-    props: ['restaurant'],
-    mixins: [formValidation],
+export default {
+  name: 'FormComment',
+  props: ['restaurant'],
+  mixins: [formValidation],
 
-    data() {
-      return {
-        author: '',
-        text: ''
+  data() {
+    return {
+      author: '',
+      text: ''
+    }
+  },
+  methods: {
+    ...mapActions(['addComment']),
+    async submitComment() {
+      const newComment = {
+        author: this.author,
+        text: this.text
       }
-    },
-    methods: {
-      ...mapActions(['addComment']),
-      async submitComment() {
-        const newComment= {
-          author: this.author,
-          text: this.text,
-        }
-        if (this.$refs.form.validate()) {
+      if (this.$refs.form.validate()) {
         await this.addComment([newComment, this.restaurant._id])
         await this.$refs.form.reset()
-        }
       }
     }
   }
+}
 </script>
